@@ -1,0 +1,50 @@
+/** [CSS 코드 재사용 (CSS 공통 중복 구문 .css 로 통합 관리)] **/
+/* tag Selector (선택자) */
+body {
+    margin: 0;
+  }
+  /* tag Selector (선택자) */
+  a { /* 현재 페이지에 있는 모든 a 태그에 CSS 설정 적용 */
+    /* CSS 속성 (Property: Value;) */
+    color: black;
+    text-decoration: none;
+  }
+  /* tag Selector (선택자) */
+  h1 { /* 현재 페이지에 있는 모든 h1 태그에 CSS 설정 적용 */
+    /* CSS 속성 (Property: Value;) */
+    font-size: xxx-large;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 0;
+    padding: 20px;
+  }
+  /* tag Selector (선택자) */
+  ol {
+    border-right: 1px solid gray;
+    width: 100px;
+    margin: 0;
+    padding: 20px;
+  }
+  #grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+  }
+  #grid ol { /* grid 라는 id 의 하위에 있는 ol 태그 */
+    padding-left: 33px;
+  }
+  #grid #article {
+    padding-left: 25px;
+  }
+
+  /* mediaQuery */
+  @media(max-width: 600px) {
+    #grid {
+      display: block;
+    }
+    ol {
+      border-right: none;
+    }
+    h1 {
+      border-bottom: none;
+    }
+}
